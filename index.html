@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyBuddy</title>
+  <base href="./">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <h1 class="logo">StudyBuddy</h1>
+
+  <nav class="nav" id="nav">
+    <button id="menuBtn" aria-label="Open menu">&#9776;</button>
+    <ul id="navList">
+      <li><a href="#dashboard" class="nav-link active">Dashboard</a></li>
+      <li><a href="#tasks" class="nav-link">Tasks</a></li>
+      <li><a href="#habits" class="nav-link">Habits</a></li>
+      <li><a href="#resources" class="nav-link">Resources</a></li>
+      <li><a href="#settings" class="nav-link">Settings</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- DASHBOARD -->
+  <section id="dashboard" class="view active">
+    <h2>Dashboard</h2>
+
+    <div class="summary-cards">
+      <div class="card">
+        <h3>Due Soon</h3>
+        <p id="dueSoonCount">0</p>
+      </div>
+
+      <div class="card">
+        <h3>Completed</h3>
+        <p id="completedCount">0</p>
+      </div>
+
+      <div class="card">
+        <h3>Habit Streak</h3>
+        <p id="habitStreak">0</p>
+      </div>
+    </div>
+
+    <h3>Today</h3>
+    <ul id="todayTasks" class="task-list">
+      <li class="muted">no tasks today</li>
+    </ul>
+
+    <h3>Progress</h3>
+    <div class="progress-container">
+      <div id="progressBar"></div>
+    </div>
+  </section>
+
+  <!-- TASKS -->
+  <section id="tasks" class="view">
+    <h2>Tasks</h2>
+
+    <form id="taskForm">
+      <input type="text" id="taskTitle" placeholder="Title *" required>
+      <textarea id="taskDesc" placeholder="Description"></textarea>
+      <input type="date" id="taskDueDate" required>
+
+      <select id="taskPriority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+
+      <select id="taskCategory">
+        <option value="">Select Category</option>
+        <option value="Math">Math</option>
+        <option value="Science">Science</option>
+        <option value="Language">Language</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <button type="submit" id="taskSubmitBtn">Add Task</button>
+      <p id="taskError" class="error"></p>
+    </form>
+
+    <div class="filters">
+      <select id="statusFilter">
+        <option value="all">All</option>
+        <option value="active">Active</option>
+        <option value="completed">Completed</option>
+      </select>
+
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="Math">Math</option>
+        <option value="Science">Science</option>
+        <option value="Language">Language</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <select id="sortBy">
+        <option value="date">Sort by Date</option>
+        <option value="priority">Sort by Priority</option>
+      </select>
+    </div>
+
+    <ul id="taskList" class="task-list">
+      <li class="muted">no tasks added yet</li>
+    </ul>
+  </section>
+
+  <!-- HABITS -->
+  <section id="habits" class="view">
+    <h2>Habits</h2>
+
+    <form id="habitForm">
+      <input type="text" id="habitTitle" placeholder="Habit Title *" required>
+      <input type="number" id="habitGoal" placeholder="Goal (1-7) *" min="1" max="7" required>
+      <button type="submit">Add Habit</button>
+      <p id="habitError" class="error"></p>
+    </form>
+
+    <div id="habitList">
+      <p class="muted">no habits added yet</p>
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section id="resources" class="view">
+    <h2>Resources</h2>
+
+    <div class="filters">
+      <input type="text" id="resourceSearch" placeholder="Search...">
+      <select id="resourceCategory">
+        <option value="all">All Categories</option>
+      </select>
+    </div>
+
+    <div id="resourceLoading" class="muted">Loading...</div>
+    <div id="resourceError" class="error"></div>
+    <div id="resourceList">
+      <p class="muted">no resources found</p>
+    </div>
+  </section>
+
+  <!-- SETTINGS -->
+  <section id="settings" class="view">
+    <h2>Settings</h2>
+
+    <div class="settings-card">
+      <button id="themeToggle">Toggle Theme</button>
+      <button id="resetData">Reset Data</button>
+    </div>
+
+    <section class="about">
+      <h3>About</h3>
+      <p>StudyBuddy is a simple SPA planner for students.</p>
+    </section>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>&copy;2026 StudyBuddy</p>
+</footer>
+
+<!-- JS Files -->
+<script src="js/state.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

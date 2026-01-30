@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "title": "MDN Web Docs",
+    "category": "JavaScript",
+    "link": "https://developer.mozilla.org",
+    "description": "Official JS documentation"
+  },
+  {
+    "id": 2,
+    "title": "MDN Web Docs",
+    "category": "Web",
+    "link": "https://developer.mozilla.org",
+    "description": "Documentation for HTML, CSS, JavaScript."
+  },
+  {
+    "id": 3,
+    "title": "W3Schools",
+    "category": "Web",
+    "link": "https://www.w3schools.com",
+    "description": "Tutorials and references for web development."
+  },
+  {
+    "id": 4,
+    "title": "Khan Academy",
+    "category": "Education",
+    "link": "https://www.khanacademy.org",
+    "description": "Free learning resources."
+  },
+  {
+    "id": 5,
+    "title": "Coursera",
+    "category": "Education",
+    "link": "https://www.coursera.org",
+    "description": "Online courses from top universities."
+  },
+  {
+    "id": 6,
+    "title": "Stack Overflow",
+    "category": "Programming",
+    "link": "https://stackoverflow.com",
+    "description": "Community for developers."
+  },
+  {
+    "id": 7,
+    "title": "freeCodeCamp",
+    "category": "Programming",
+    "link": "https://www.freecodecamp.org",
+    "description": "Learn to code for free."
+  }
+]
