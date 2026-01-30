@@ -281,9 +281,7 @@ function calculateStreak() {
 
   return maxStreak;
 }
-// حل مشكلة الهاش في GitHub Pages
 window.addEventListener('load', () => {
   const hash = location.hash || '#dashboard';
   showView(hash.substring(1));
 });
-
